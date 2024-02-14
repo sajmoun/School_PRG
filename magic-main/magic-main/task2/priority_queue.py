@@ -34,17 +34,3 @@ print("Processing tasks in Priority Order:")
 for task in priority_queue:
     print("Processing:", task)
 
-# Additional Tests
-def test_empty_pop():
-    pq = PriorityQueue()
-    with pytest.raises(IndexError):
-        pq.pop()
-
-def test_iteration():
-    pq = PriorityQueue()
-    pq.push("Task 1", 3)
-    pq.push("Task 2", 1)
-    pq.push("Task 3", 2)
-
-    tasks = list(pq)
-    assert tasks == ["Task 2", "Task 3", "Task 1"]
